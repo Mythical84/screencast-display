@@ -1,5 +1,6 @@
-import components.SyntaxPane;
+package com.mythical83.apcsa;
 
+import com.mythical83.apcsa.components.SyntaxPane;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -12,7 +13,6 @@ class EditorWindow extends JFrame {
     private SyntaxPane sp;
 
     private EditorWindow() {
-        MainWindow mw = MainWindow.getWindow();
         setTitle("Code Editor");
         sp = new SyntaxPane();
         sp.addKeyListener(new KeyListener() {
@@ -24,6 +24,7 @@ class EditorWindow extends JFrame {
                     try {
                         BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\artin\\projects\\ApCSA Screencast Display\\src\\Test.java"));
                         bw.write(sp.getText());
+                        bw.close();
                     } catch (IOException ex) {
                         throw new RuntimeException(ex);
                     }
@@ -54,6 +55,7 @@ class EditorWindow extends JFrame {
             text += st + "\n";
         }
         sp.setText(text);
+        br.close();
     }
 
     public static EditorWindow getWindow() {

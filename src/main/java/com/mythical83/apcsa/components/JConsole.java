@@ -1,4 +1,4 @@
-package components;
+package com.mythical83.apcsa.components;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;
@@ -10,7 +10,6 @@ public class JConsole extends JTextArea {
     private boolean canType;
     // A count of how many characters the user has typed since it's last reset
     private int userTyped;
-
 
     private JConsole() {
         canType = true;

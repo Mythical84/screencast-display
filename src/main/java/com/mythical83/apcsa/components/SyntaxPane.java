@@ -1,4 +1,4 @@
-package components;
+package com.mythical83.apcsa.components;
 
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
@@ -49,6 +49,7 @@ public class SyntaxPane extends JRootPane implements SyntaxConstants {
         while ((st=br.readLine()) != null) {
             textArea.append(st + "\n");
         }
+        br.close();
     }
 
     public void setText(String text) {

@@ -1,5 +1,7 @@
-import components.JConsole;
-import components.SyntaxPane;
+package com.mythical83.apcsa;
+
+import com.mythical83.apcsa.components.JConsole;
+import com.mythical83.apcsa.components.SyntaxPane;
 
 import javax.swing.*;
 import java.awt.*;
